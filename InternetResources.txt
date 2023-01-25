@@ -1,0 +1,12 @@
+
+JavaScript Mastery
+React JS Full Course 2022 | Build an App and Master React in 1 Hour
+https://www.youtube.com/watch?v=b9eMGE7QtTk
+
+F: movieshub-reactjs
+> npx create-react-app ./
+>npm start
+
+http://localhost:3001/
+
+
