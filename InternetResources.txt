@@ -3,7 +3,7 @@ JavaScript Mastery
 React JS Full Course 2022 | Build an App and Master React in 1 Hour
 https://www.youtube.com/watch?v=b9eMGE7QtTk
 
-F: movieshub-reactjs
+F: movieland-reactjs
 > npx create-react-app ./
 >npm start
 
@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=Q9n2mLqXFpU
 
 OG:
 {
-  "name": "movieshub-reactjs",
+  "name": "movieland-reactjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -61,7 +61,7 @@ OG:
 
 
 Add:
-  "homepage": "https://ashrafqasem.github.io/movieshub-reactjs",
+  "homepage": "https://ashrafqasem.github.io/movieland-reactjs",
 
   "scripts": {
     //..
@@ -72,8 +72,8 @@ Add:
 
 Updated:
 {
-  "homepage": "https://ashrafqasem.github.io/movieshub-reactjs",
-  "name": "movieshub-reactjs",
+  "homepage": "https://ashrafqasem.github.io/movieland-reactjs",
+  "name": "movieland-reactjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -119,7 +119,7 @@ Updated:
 
 >npm run deploy
 
--> https://github.com/ashrafqasem/movieshub-reactjs
+-> https://github.com/ashrafqasem/movieland-reactjs
 -> Branches -> master -> gh-pages
 -> Settings -> Pages
 
