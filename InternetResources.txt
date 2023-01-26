@@ -72,6 +72,7 @@ Add:
 
 Updated:
 {
+  "homepage": "https://ashrafqasem.github.io/movieshub-reactjs",
   "name": "movieshub-reactjs",
   "version": "0.1.0",
   "private": true,
@@ -88,7 +89,10 @@ Updated:
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "stop": "taskkill -F -IM node.exe",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -113,3 +117,58 @@ Updated:
   }
 }
 
+>npm run deploy
+
+-> https://github.com/ashrafqasem/movieshub-reactjs
+-> Branches -> master -> gh-pages
+-> Settings -> Pages
+
+Also:
+https://blog.logrocket.com/deploying-react-apps-github-pages/
+
+
+React Hooks API Reference:
+https://reactjs.org/docs/hooks-reference.html
+
+    Basic Hooks
+        useState
+        useEffect
+        useContext
+
+    Additional Hooks
+        useReducer
+        useCallback
+        useMemo
+        useRef
+        useImperativeHandle
+        useLayoutEffect
+        useDebugValue
+        useDeferredValue
+        useTransition
+        useId
+
+    Library Hooks
+        useSyncExternalStore
+        useInsertionEffect
+
+
+Hello World:
+https://reactjs.org/docs/hooks-reference.html
+
+
+Movies:
+https://www.omdbapi.com/
+https://www.omdbapi.com/apikey.aspx
+
+
+
+Generate API Key
+Account Type
+
+FREE! (1,000 daily limit)
+Email ash09q@hotmail.com
+Name AshrafOmdbapi QasemOmdbapi
+
+Here is your key: 50e913ba
+
+OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=50e913ba
