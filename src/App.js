@@ -5,31 +5,31 @@ import MovieCard from './MovieCard'
 
 import axios from 'axios';
 
-// const movie1 = {
-//   "Title": "Italian Spiderman",
-//   "Year": "2007",
-//   "imdbID": "tt2705436",
-//   "Type": "movie",
-//   "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
-// };
+const movie1 = {
+  "Title": "Italian Spiderman",
+  "Year": "2007",
+  "imdbID": "tt2705436",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
+};
 
 function App() {
 
   const [movies, setMovies] = useState([
-      // {
-      //   "Title": "Italian Spiderman",
-      //   "Year": "2007",
-      //   "imdbID": "tt2705436",
-      //   "Type": "movie",
-      //   "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
-      // },
-      // {
-      //   "Title": "Italian Spiderman",
-      //   "Year": "2007",
-      //   "imdbID": "tt2705436_",
-      //   "Type": "movie",
-      //   "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
-      // },
+    // {
+    //   "Title": "Italian Spiderman",
+    //   "Year": "2007",
+    //   "imdbID": "tt2705436",
+    //   "Type": "movie",
+    //   "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
+    // },
+    // {
+    //   "Title": "Italian Spiderman",
+    //   "Year": "2007",
+    //   "imdbID": "tt2705436_",
+    //   "Type": "movie",
+    //   "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
+    // },
   ]);
 
   const [users, setUsers] = useState([]); //. [] => initial value is empty array 
@@ -43,16 +43,16 @@ function App() {
     const API_URL_MOVIES_ALL = `http://www.omdbapi.com/?i=${iKey}&apikey=${apiKey}`; //.x //OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=50e913ba
     const API_URL_MOVIES = `http://www.omdbapi.com?apikey=${apiKey}`; //http://www.omdbapi.com?apikey=50e913ba
 
-    const API_URL_MOVIES_BY_TITLE = `${API_URL_MOVIES}&s=${title}`;  console.log(API_URL_MOVIES_BY_TITLE); //http://www.omdbapi.com?apikey=50e913ba&s=patman
+    const API_URL_MOVIES_BY_TITLE = `${API_URL_MOVIES}&s=${title}`; console.log(API_URL_MOVIES_BY_TITLE); //http://www.omdbapi.com?apikey=50e913ba&s=patman
     const fetchData = await fetch(API_URL_MOVIES_BY_TITLE); console.log(fetchData);
-    const jsonMData = await fetchData.json(); console.log(jsonMData);  console.log(jsonMData.Search);
+    const jsonMData = await fetchData.json(); console.log(jsonMData); console.log(jsonMData.Search);
 
     setMovies(jsonMData.Search);
   };
 
   async function getUsers() {
     try {
-      const API_URL_RANDOM_USER = 'https://randomuser.me/api'; 
+      const API_URL_RANDOM_USER = 'https://randomuser.me/api';
       //const fetchUsers = await fetch(API_URL_RANDOM_USER); //console.log(fetchUsers);
       //const jsonUsers = await fetchUsers.json();  console.log(jsonUsers);
 
@@ -64,7 +64,7 @@ function App() {
         return response.data.results; //. nn
       });
       //const jsonData = await getData.json(); console.log(jsonData); //. x
-    } catch(error) {
+    } catch (error) {
       console.log(error);
     }
   }
@@ -87,9 +87,9 @@ function App() {
         {/* <input placeholder="Search for movies" value="Superman" onChange={(title) => {setSearchTerm(title)}} /> */}
         <input placeholder="Search for movies" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
 
-        <img src={SearchIcon} alt="Search" onClick={() => searchMovies(searchTerm) } />
+        <img src={SearchIcon} alt="Search" onClick={() => searchMovies(searchTerm)} />
       </div>
-      
+
       <div className="container" >
 
         {/* <div className="movie" >
@@ -109,7 +109,7 @@ function App() {
         {/* <MovieCard props={movies[0] } /> */}
 
         {
-          movies?.length > 0 
+          movies?.length > 0
             ? (
               <div className="container">
                 {movies.map((movie) => (
@@ -118,7 +118,7 @@ function App() {
               </div>
             ) : (
               <div className="empty">
-                <h2 style={{color: "yellow"}}>No movies found</h2>
+                <h2 style={{ color: "yellow" }}>No movies found</h2>
               </div>
             )
         }
